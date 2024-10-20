@@ -1,4 +1,4 @@
-package java.gestione.eventi;
+package gestore.java.eventi;
 
 import java.time.LocalDate;
 
@@ -7,7 +7,17 @@ public class Evento {
 	private String titolo;
 	private LocalDate data;
 	private int postiTotali;
-	private int postiPrenotati;
+	private int postiPrenotati = 0;
+
+	public Evento (String titolo, LocalDate data, int postiTotali ) {
+		setTitolo(titolo);
+		setData(data);
+		this.postiTotali = postiTotali;
+	}
+	
+	public Evento() {
+		
+	}
 
 	public String getTitolo() {
 		return titolo;
